@@ -16,3 +16,6 @@ test-tmp/
 .idea/
 .vscode/
 .DS_Store
+
+# FEDERATE building block description (sent to FEDERATE, not part of this repository)
+/BB_CODE4EV_MBSE.md
