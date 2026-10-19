@@ -167,9 +167,7 @@ Funding, description and the third-party components required at build or run tim
 
 ## Acknowledgement
 
-<img src="docs/images/funded-by-eu.png" alt="Funded by the European Union" height="48">
-&nbsp;&nbsp;
-<a href="https://code4ev.eu"><img src="docs/images/code4ev-logo.png" alt="CODE4EV" height="48"></a>
+<p><a href="https://code4ev.eu"><img src="docs/images/code4ev-logo.png" alt="CODE4EV" height="48" align="middle"></a>&nbsp;&nbsp;<img src="docs/images/funded-by-eu.png" alt="Funded by the European Union" height="48" align="middle"></p>
 
 Developed by the [Instituto Tecnológico de Aragón (ITA)](https://www.ita.es) in the project
 **CODE4EV – Collaborative Development Framework for Electric Software-Defined Vehicles**
