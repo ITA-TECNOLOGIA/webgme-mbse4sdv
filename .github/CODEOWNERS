@@ -1,0 +1,16 @@
+# Code owners for webgme-mbse4sdv.
+# Every pull request needs the approval of a code owner before it can be merged
+# (enforced by the "Require review from Code Owners" rule on the main branch).
+# Later matching patterns take precedence over earlier ones.
+
+# Default owner for the whole repository
+*                       @mabarcelona
+
+# Source code, core patches and build scripts
+/webgme-app/src/        @mabarcelona
+/webgme-app/patches/    @mabarcelona
+/webgme-app/scripts/    @mabarcelona
+/mcp-server/            @mabarcelona
+
+# Repository configuration (including this file)
+/.github/               @mabarcelona
