@@ -1,0 +1,74 @@
+[
+    {
+        "id": "mbse4sdvExcelForm",
+        "title": "Excel table view",
+        "panel": "panels/mbse4sdvExcel/ExcelPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvScenarioEditor",
+        "title": "Scenario view",
+        "panel": "panels/mbse4sdvScenarioEditor/ScenarioEditorPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvGrid",
+        "title": "Grid view",
+        "panel": "panels/mbse4sdvGrid/GridPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvInformation",
+        "title": "Information view",
+        "panel": "panels/mbse4sdvInformation/InformationPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvDynamic",
+        "title": "Dynamics view",
+        "panel": "panels/mbse4sdvDynamic/DynamicPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvKanban",
+        "title": "Kanban view",
+        "panel": "panels/mbse4sdvKanbanGrid/KanbanGridPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvTraceabilityMatrix",
+        "title": "Traceability view",
+        "panel": "panels/mbse4sdvTraceabilityMatrix/TraceabilityMatrixPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvRequirementMatrix",
+        "title": "Requirement view",
+        "panel": "panels/mbse4sdvRequirementMatrix/RequirementMatrixPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "HierarchicalModelEditor",
+        "title": "Hierarchical view",
+        "panel": "panels/HierarchicalModelEditor/HierarchicalModelEditorPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "CodeEditor",
+        "title": "Code editor",
+        "panel": "panels/CodeEditor/CodeEditorPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "HFSMViz",
+        "title": "State machine view (HFSM)",
+        "panel": "panels/HFSMViz/HFSMVizPanel",
+        "DEBUG_ONLY": false
+    },
+    {
+        "id": "mbse4sdvInteraction",
+        "title": "Interaction view",
+        "panel": "panels/InteractionVisualizer/InteractionVisualizerPanel",
+        "DEBUG_ONLY": false
+    }
+]

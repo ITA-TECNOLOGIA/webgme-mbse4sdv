@@ -1,0 +1,88 @@
+{
+  "description": "Names stored inside WebGME models (registry/meta) that changed during the MBSE4SDV migration. Used to migrate existing .webgmex projects.",
+  "visualizers": {
+    "ITAC4EVExcelForm": "mbse4sdvExcelForm",
+    "ITAC4EVScenarioEditor": "mbse4sdvScenarioEditor",
+    "ITAC4EVGrid": "mbse4sdvGrid",
+    "ITAC4EVInformation": "mbse4sdvInformation",
+    "ITAC4EVDynamic": "mbse4sdvDynamic",
+    "ITAC4EVKanban": "mbse4sdvKanban",
+    "ITAC4EVTraceabilityMatrix": "mbse4sdvTraceabilityMatrix",
+    "ITAC4EVRequirementMatrix": "mbse4sdvRequirementMatrix",
+    "ITAC4EVInteraction": "mbse4sdvInteraction"
+  },
+  "decorators": {
+    "ITAC4EVEnrichedNoteDecorator": "mbse4sdvEnrichedNoteDecorator",
+    "ITAC4EVNoteDecorator": "mbse4sdvNoteDecorator",
+    "ITAC4EvNoteRelationDecorator": "mbse4sdvNoteRelationDecorator",
+    "ITAC4EVSVGHTMLDecorator": "mbse4sdvSVGHTMLDecorator",
+    "ITAC4EVSysMLDecorator": "mbse4sdvSysMLDecorator"
+  },
+  "plugins": {
+    "ITAC4EVTraceabilityMatrix": "mbse4sdvTraceabilityMatrix"
+  },
+  "removedPlugins": [
+    "ITAC4EVDocumentGenerator",
+    "ITAC4EVEnrichedNoteImageInliner",
+    "ITAC4EVExport",
+    "ITAC4EVGitExporter",
+    "ITAC4EVInfraEventBusTestExporter",
+    "ITAC4EVPersistenceRepositoryExporter",
+    "ITAC4EVUpdateSeedProject"
+  ],
+  "registryKeys": {
+    "itac4evSrcPort": "mbse4sdvSrcPort",
+    "itac4evDstPort": "mbse4sdvDstPort",
+    "itac4evManualRoute": "mbse4sdvManualRoute"
+  },
+  "icons": {
+    "description": "Icons of removed image files replaced by Material Design icons (WebGME SVG library). Nodes of the \"hfsm\" library keep their icons.",
+    "excludeLibraries": [
+      "hfsm"
+    ],
+    "registryKeys": [
+      "SVGIcon",
+      "PortSVGIcon",
+      "TreeItemCollapsedIcon",
+      "TreeItemExpandedIcon"
+    ],
+    "registry": {
+      "svgs/interactionmodel.svg": "material-design/swap_horiz.svg",
+      "svgs/stateDiagram.svg": "material-design/mediation.svg",
+      "svgs/sysmlbdd.svg": "material-design/schema.svg",
+      "svgs/task.svg": "material-design/assignment.svg",
+      "svgs/taxonomy.svg": "material-design/account_tree.svg",
+      "svgs/testcafe-svgrepo-com.svg": "material-design/done_all.svg",
+      "svgs/usecase.svg": "material-design/groups.svg"
+    },
+    "attributeNames": [
+      "pathimage",
+      "pathbackgroundimage"
+    ],
+    "attributes": {
+      "goal-svgrepo-com2.svg": "material-design/track_changes.svg",
+      "table-of-contents-svgrepo-com.svg": "material-design/hub.svg",
+      "goal-svgrepo-com.svg": "material-design/assignment.svg",
+      "file-files-and-folders-svgrepo-com.svg": "material-design/groups.svg",
+      "drawing-svgrepo-com.svg": "material-design/architecture.svg",
+      "design-pencil-svgrepo-com.svg": "material-design/settings_suggest.svg",
+      "module-yes-svgrepo-com.svg": "material-design/widgets.svg",
+      "LogicalStructureModel.svg": "material-design/schema.svg",
+      "InternalConnectivityModel.svg": "material-design/cable.svg",
+      "statemachine.svg": "material-design/mediation.svg",
+      "interactionmodel.svg": "material-design/swap_horiz.svg",
+      "taxonomy.svg": "material-design/storage.svg",
+      "vss.svg": "material-design/directions_car.svg",
+      "sdd.svg": "material-design/commute.svg",
+      "release-conditions-svgrepo-com.svg": "material-design/memory.svg",
+      "design-svgrepo-com.svg": "material-design/design_services.svg",
+      "coding-binary-svgrepo-com.svg": "material-design/code.svg",
+      "record-svgrepo-com.svg": "material-design/fact_check.svg",
+      "label-svgrepo-com.svg": "material-design/label.svg",
+      "integration-testing-svgrepo-com.svg": "material-design/extension.svg",
+      "checking-list-svgrepo-com.svg": "material-design/checklist.svg",
+      "acceptance-testing-svgrepo-com.svg": "material-design/verified.svg",
+      "car-svgrepo-com.svg": "material-design/electric_car.svg"
+    }
+  }
+}

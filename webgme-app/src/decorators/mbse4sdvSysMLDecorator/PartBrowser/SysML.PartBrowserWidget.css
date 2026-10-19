@@ -1,0 +1,10 @@
+.part-browser .SysML-decorator {
+  min-width: 100px;
+  width: 100px;
+  min-height: 44px; }
+  .part-browser .SysML-decorator .name {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .part-browser .SysML-decorator .resize-icon {
+    display: none; }

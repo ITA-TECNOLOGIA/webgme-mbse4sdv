@@ -1,0 +1,35 @@
+{
+  "name": "cytoscape-context-menus",
+  "description": "A Cytoscape.js extension to provide context menu around elements and core instance.",
+  "main": "cytoscape-context-menus.js",
+  "dependencies": {
+    "cytoscape": "^2.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iVis-at-Bilkent/cytoscape.js-context-menus.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "cytoscape",
+    "cyext"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/iVis-at-Bilkent/cytoscape.js-context-menus",
+  "version": "3.0.4",
+  "_release": "3.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.4",
+    "commit": "abe50265c7d768618adb0a90c907360be3c1710d"
+  },
+  "_source": "https://github.com/iVis-at-Bilkent/cytoscape.js-context-menus.git",
+  "_target": "3.0.4",
+  "_originalSource": "iVis-at-Bilkent/cytoscape.js-context-menus"
+}

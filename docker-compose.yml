@@ -1,0 +1,61 @@
+# MBSE4SDV: MongoDB + WebGME application + MCP server
+#
+#   cp .env.example .env      # optional: set ADMIN_PASSWORD, ports, ...
+#   docker compose up -d --build
+#
+# WebGME:      http://localhost:${WEBGME_PORT:-8888}   (user ADMIN_USERNAME; example project "Mbse4sdvExample")
+# MCP server:  http://localhost:${MCP_PORT:-3000}/mcp  (Streamable HTTP)
+# If ADMIN_PASSWORD is empty, a random password is printed once in the logs: docker compose logs webgme
+
+name: mbse4sdv
+
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    # not published: only reachable from the other services
+
+  webgme:
+    build: ./webgme-app
+    image: mbse4sdv-webgme
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://mongo:27017/mbse4sdv
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@example.org}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      ALLOW_USER_REGISTRATION: ${ALLOW_USER_REGISTRATION:-false}
+      IMPORT_EXAMPLE: ${IMPORT_EXAMPLE:-true}
+    ports:
+      - "${WEBGME_PORT:-8888}:8888"
+    volumes:
+      - webgme-keys:/data
+      - webgme-blobs:/app/blob-local-storage
+
+  mcp-server:
+    build: ./mcp-server
+    image: mbse4sdv-mcp-server
+    restart: unless-stopped
+    depends_on:
+      webgme:
+        condition: service_healthy
+    environment:
+      BASE_URL: http://webgme:8888/mbse4sdv/api
+      MCP_ALLOW_FULL_TREE_READS: ${MCP_ALLOW_FULL_TREE_READS:-false}
+    ports:
+      - "${MCP_PORT:-3000}:3000"
+
+volumes:
+  mongo-data:
+  webgme-keys:
+  webgme-blobs:

@@ -1,0 +1,35 @@
+{
+  "name": "cytoscape-edgehandles",
+  "description": "Edge creation extension for Cytoscape.js",
+  "main": "cytoscape-edgehandles.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cytoscape/cytoscape.js-edgehandles.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "cytoscape",
+    "cyext"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cytoscape": "^2.2.8 || ^3.0.0"
+  },
+  "homepage": "https://github.com/cytoscape/cytoscape.js-edgehandles",
+  "version": "2.15.0",
+  "_release": "2.15.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.15.0",
+    "commit": "7fd2ccde9c3441b86a4551b610966b22fe1586dd"
+  },
+  "_source": "https://github.com/cytoscape/cytoscape.js-edgehandles.git",
+  "_target": "2.15.0",
+  "_originalSource": "cytoscape/cytoscape.js-edgehandles"
+}

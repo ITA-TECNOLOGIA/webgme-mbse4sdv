@@ -1,0 +1,54 @@
+{
+  "id": "mbse4sdvTraceabilityMatrix",
+  "name": "Traceability matrix",
+  "version": "0.1.2",
+  "description": "Generates a traceability matrix between the elements of two meta types of the model.",
+  "configWidget": "mbse4sdv/dialogs/mbse4sdvTraceabilityMatrixConfigDialog",
+  "icon": {
+    "class": "glyphicon glyphicon-equalizer",
+    "src": ""
+  },
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": true,
+  "canBeAborted": true,
+  "writeAccessRequired": false,
+  "configStructure": [
+    {
+      "name": "traceabilityType",
+      "displayName": "Traceability type",
+      "description": "Set (relation) used to compute the traceability links between the row and column elements.",
+      "value": "trace",
+      "valueType": "string",
+      "valueItems": [
+        "trace",
+        "refine",
+        "satisfy",
+        "stakeholders",
+        "tags"
+      ],
+      "readOnly": false
+    },
+    {
+      "name": "traceabilityRow",
+      "displayName": "Row meta type",
+      "description": "Meta type of the elements shown as rows (\"All\" for every type).",
+      "value": "All",
+      "valueType": "string",
+      "valueItems": [
+        "All"
+      ],
+      "readOnly": false
+    },
+    {
+      "name": "traceabilityColumn",
+      "displayName": "Column meta type",
+      "description": "Meta type of the elements shown as columns (\"All\" for every type).",
+      "value": "All",
+      "valueType": "string",
+      "valueItems": [
+        "All"
+      ],
+      "readOnly": false
+    }
+  ]
+}

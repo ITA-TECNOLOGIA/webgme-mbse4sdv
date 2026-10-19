@@ -1,0 +1,31 @@
+{
+  "name": "mbse4sdv-mcp-server",
+  "version": "0.1.0",
+  "description": "Model Context Protocol (MCP) server that exposes the MBSE4SDV WebGME REST API as tools for LLM clients.",
+  "license": "MIT",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "mbse4sdv-mcp-server": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.5",
+    "express": "^4.21.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv.git",
+    "directory": "mcp-server"
+  },
+  "homepage": "https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv#readme",
+  "bugs": {
+    "url": "https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv/issues"
+  }
+}

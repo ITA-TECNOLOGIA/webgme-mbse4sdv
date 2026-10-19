@@ -1,0 +1,139 @@
+MBSE4SDV 0.1.0
+Copyright (c) 2026 Instituto Tecnológico de Aragón
+Author: Instituto Tecnológico de Aragón (ita@ita.es) - Miguel Ángel Barcelona / Laura García /
+Pablo Torner / Guillermo López / Ariadna Belen Ruiz
+
+
+NOTICE
+
+The software has been developed by INSTITUTO TECNOLÓGICO DE ARAGÓN (ITA).
+It is licensed under the MIT License (see LICENSE). Third-party components
+included in this software, their copyright notices and their licenses are
+listed in THIRD_PARTY_LICENSES.
+
+
+ACKNOWLEDGEMENT
+
+MBSE4SDV has been developed within the project CODE4EV - Collaborative
+Development Framework for Electric Software-Defined Vehicles
+(https://code4ev.eu), funded by the European Union under the Horizon Europe
+programme, grant agreement No 101192739.
+
+Views and opinions expressed are however those of the author(s) only and do not
+necessarily reflect those of the European Union or the granting authority.
+Neither the European Union nor the granting authority can be held responsible
+for them.
+
+
+DESCRIPTION
+
+Model-Based Systems Engineering environment for Software-Defined Vehicles, built
+on WebGME. The lifecycle of an SDV (requirements, functional, logical and
+physical architecture, subsystem design, implementation, testing, validation and
+deployment) is captured as structured, versioned models that several engineers
+can edit at the same time. It includes a metamodel for the SDV lifecycle and for
+hierarchical finite state machines, an example project, a REST API and an MCP
+server that exposes the model operations to LLM clients.
+
+
+RELATED PUBLICATIONS
+
+There are no publications specifically related to this software. The
+methodology it implements is described in the public CODE4EV deliverable
+D2.1 - SDV design methodology (https://code4ev.eu).
+
+
+APIS
+
+This software does not require access to third-party APIs.
+The included MCP server can be used by LLM clients chosen by the user. Such
+clients are external services for which the user shall bear sole
+responsibility, including responsibility for maintaining the necessary access,
+licences and authorisations, and for ensuring regulatory compliance.
+
+
+REQUIREMENTS
+
+This software requires certain third-party components under open-source
+licenses. These components are not included in or distributed with this
+software and must be obtained and installed separately by the user (they are
+downloaded by npm and Docker when the software is built). Some of these
+components may be required for loading, executing, or operating the software at
+runtime.
+This information is provided solely for transparency and traceability purposes.
+It does not modify, replace, or extend the license terms applicable to each
+third-party component. The versions are those resolved in the package-lock.json
+files of this release.
+
+WebGME application (webgme-app)
+
+webgme v.2.43.0
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/webgme/webgme
+(modified at install time by webgme-app/patches/webgme+2.43.0.patch; see THIRD_PARTY_LICENSES)
+
+webgme-engine v.2.30.0
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/webgme/webgme-engine
+
+webgme-codeeditor v.3.6.19
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/finger563/webgme-codeeditor
+
+webgme-to-json v.1.0.4
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/finger563/webgme-to-json
+
+webgme-hfsm v.1.8.0
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/finger563/webgme-hfsm
+(HFSM visualizer, simulator, decorators and code generator; its metamodel is
+included in the seeds, see THIRD_PARTY_LICENSES)
+
+codemirror v.5.65.21
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/codemirror/codemirror5
+
+express v.4.22.3
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/expressjs/express
+
+q v.1.5.1
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/kriskowal/q
+
+patch-package v.8.0.1
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/ds300/patch-package
+
+adm-zip v.0.5.18 (development only, used by the seed export script)
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/cthackers/adm-zip
+
+MCP server (mcp-server)
+
+@modelcontextprotocol/sdk v.1.32.1
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/modelcontextprotocol/typescript-sdk
+
+axios v.1.20.0
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/axios/axios
+
+express v.4.22.3
+License: MIT (See Section B of THIRD_PARTY_LICENSES)
+https://github.com/expressjs/express
+
+Runtime environment
+
+Node.js v.20
+License: MIT, with third-party components under their own licenses
+https://nodejs.org (Docker image node:20-bookworm-slim)
+
+MongoDB Community Server v.7
+License: Server Side Public License v1 (SSPL-1.0)
+https://www.mongodb.com (Docker image mongo:7)
+
+Docker Engine with Docker Compose
+License: Apache-2.0
+https://www.docker.com

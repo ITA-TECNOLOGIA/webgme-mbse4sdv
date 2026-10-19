@@ -1,0 +1,72 @@
+/*
+ * MBSE4SDV theme. Loaded after the WebGME core styles through gmeConfig.visualization.extraCss,
+ * so it only overrides look & feel without modifying WebGME itself.
+ */
+
+/* ---- Palette (overrides themes/dawn.css) ---- */
+a {
+  color: #000087; }
+
+a:hover {
+  color: #005CFF; }
+
+.toolbar-container a {
+  color: #000087; }
+
+.toolbar-container a:hover,
+.toolbar-container a:active {
+  border-radius: 25px;
+  color: #fff;
+  background-color: #005CFF; }
+
+.btn.focus, .btn:focus, .btn:hover {
+  color: #005CFF; }
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background: #005CFF;
+  border-radius: 5px; }
+
+.navbar-inverse {
+  background-image: linear-gradient(to bottom, #005CFF 0, #cccccc 100%); }
+
+.navbar-inverse .navbar-link,
+.navbar-inverse .navbar-text {
+  color: #fff; }
+
+/* ---- Toolbar ---- */
+div.toolbar-container .btn {
+  border-radius: 7px; }
+
+/* ---- Project navigator: long branch/project names ---- */
+ul.dropdown-navigator > li > div.label-container {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 350px; }
+
+ul.dropdown-navigator li.separator {
+  top: -13px !important; }
+
+/* ---- Visualizer selector: scroll when there are many visualizers ---- */
+.visualizer-panel ul.nav {
+  max-height: 180px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+/* ---- Part browser: keep large SVG icons inside the panel ---- */
+.part-browser > ul > li.decorated-list-item {
+  max-width: calc(100% - 20px); }
+
+.part-browser > ul > li div.part,
+.part,
+.part .svg-decorator {
+  max-width: 100%; }
+
+.part .svg-decorator .svg-content {
+  max-width: 100%;
+  overflow: hidden; }
+
+.part .svg-decorator .svg-content svg {
+  max-width: 100%;
+  height: auto; }

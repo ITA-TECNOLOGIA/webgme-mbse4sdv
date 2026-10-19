@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.webgmex binary
+*.png binary
+*.jpg binary
+*.ico binary
+# patch-package patches must keep their exact line endings (some patched WebGME files use CRLF)
+*.patch -text

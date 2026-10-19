@@ -1,0 +1,170 @@
+diff --git a/node_modules/webgme/src/client/decorators/ModelDecorator/Core/ModelDecorator.Core.js b/node_modules/webgme/src/client/decorators/ModelDecorator/Core/ModelDecorator.Core.js
+index 097709c..9092c92 100644
+--- a/node_modules/webgme/src/client/decorators/ModelDecorator/Core/ModelDecorator.Core.js
++++ b/node_modules/webgme/src/client/decorators/ModelDecorator/Core/ModelDecorator.Core.js
+@@ -167,6 +167,7 @@ define([
+             //this.name = nodeObj.getAttribute(nodePropertyNames.Attributes.name);
+             this.name = nodeObj.getFullyQualifiedName();
+             this.formattedName = displayFormat.resolve(nodeObj);
++            this.formattedName += displayFormat.getInstanceSuffix(client, nodeObj); // [MBSE4SDV]
+         } else {
+             this.name = '';
+             this.formattedName = noName;
+diff --git a/node_modules/webgme/src/client/decorators/SVGDecorator/Core/SVGDecorator.Core.js b/node_modules/webgme/src/client/decorators/SVGDecorator/Core/SVGDecorator.Core.js
+index f701db1..848ff6b 100644
+--- a/node_modules/webgme/src/client/decorators/SVGDecorator/Core/SVGDecorator.Core.js
++++ b/node_modules/webgme/src/client/decorators/SVGDecorator/Core/SVGDecorator.Core.js
+@@ -153,6 +153,7 @@ define([
+             //this.name = nodeObj.getAttribute(nodePropertyNames.Attributes.name);
+             this.name = nodeObj.getFullyQualifiedName();
+             this.formattedName = displayFormat.resolve(nodeObj);
++            this.formattedName += displayFormat.getInstanceSuffix(client, nodeObj); // [MBSE4SDV]
+         } else {
+             this.name = '';
+             this.formattedName = noName;
+diff --git a/node_modules/webgme/src/client/js/Panels/ModelEditor/ModelEditorControl.DiagramDesignerWidgetEventHandlers.js b/node_modules/webgme/src/client/js/Panels/ModelEditor/ModelEditorControl.DiagramDesignerWidgetEventHandlers.js
+index 0f9c621..e6c6aa5 100644
+--- a/node_modules/webgme/src/client/js/Panels/ModelEditor/ModelEditorControl.DiagramDesignerWidgetEventHandlers.js
++++ b/node_modules/webgme/src/client/js/Panels/ModelEditor/ModelEditorControl.DiagramDesignerWidgetEventHandlers.js
+@@ -459,9 +459,15 @@ define(['js/logger',
+     };
+ 
+     ModelEditorControlDiagramDesignerWidgetEventHandlers.prototype._onDesignerItemDoubleClick = function (id /*, event */) {
+-        var gmeID = this._ComponentID2GMEID[id];
++        var gmeID = this._ComponentID2GMEID[id],
++            nodeObj;
+ 
+         if (gmeID) {
++            // [MBSE4SDV] Instances of a non-meta prototype open the prototype instead.
++            nodeObj = this._client.getNode(gmeID);
++            if (nodeObj && nodeObj.getBaseId() && nodeObj.getBaseId() !== nodeObj.getMetaTypeId()) {
++                gmeID = nodeObj.getBaseId();
++            }
+             this.logger.debug('Opening model with id "' + gmeID + '"');
+             WebGMEGlobal.State.registerActiveObject(gmeID);
+         }
+diff --git a/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js b/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js
+index df22118..5c911f6 100644
+--- a/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js
++++ b/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js
+@@ -14,7 +14,8 @@ define(['js/logger',
+     './ObjectBrowserControlBase',
+     'js/Utils/LibraryManager',
+     'js/Dialogs/ImportModel/ImportModelDialog',
+-    'js/Utils/Exporters'
++    'js/Utils/Exporters',
++    'js/Utils/DisplayFormat'
+ ], function (Logger,
+              nodePropertyNames,
+              CONSTANTS,
+@@ -22,7 +23,8 @@ define(['js/logger',
+              ObjectBrowserControlBase,
+              LibraryManager,
+              ImportModelDialog,
+-             exporters) {
++             exporters,
++             displayFormat) {
+     'use strict';
+ 
+     var NODE_PROGRESS_CLASS = 'node-progress',
+@@ -220,7 +222,7 @@ define(['js/logger',
+                         //the node was present on the client side, render ist full data
+                         childrenDescriptors.push({
+                             id: currentChildId,
+-                            name: childNode.getFullyQualifiedName(),
++                            name: childNode.getFullyQualifiedName() + displayFormat.getInstanceSuffix(client, childNode), // [MBSE4SDV]
+                             hasChildren: (childNode.getChildrenIds()).length > 0,
+                             class: getNodeClass(childNode, metaTypeInfo.isMetaNode),
+                             icon: self.getIcon(childNode),
+@@ -317,6 +319,11 @@ define(['js/logger',
+         };
+ 
+         //called when the user double-cliked on a node in the tree
++        // [MBSE4SDV] Used by the tree widget to reveal the active node.
++        treeBrowser.centerNode = function (nodeId) {
++            client.dispatchEvent('LOCATE_NODE', {nodeId: nodeId});
++        };
++
+         treeBrowser.onNodeDoubleClicked = function (nodeId) {
+             logger.debug('Firing onNodeDoubleClicked with nodeId: ' + nodeId);
+             //var settings = {};
+@@ -606,7 +613,7 @@ define(['js/logger',
+ 
+                             //create the node's descriptor for the tree-browser widget
+                             nodeDescriptor = {
+-                                name: updatedObject.getFullyQualifiedName(),
++                                name: updatedObject.getFullyQualifiedName() + displayFormat.getInstanceSuffix(client, updatedObject), // [MBSE4SDV]
+                                 hasChildren: currentChildren.length > 0,
+                                 class: objType,
+                                 icon: self.getIcon(updatedObject),
+@@ -636,7 +643,7 @@ define(['js/logger',
+ 
+                             //create the node's descriptor for the treebrowser widget
+                             nodeDescriptor = {
+-                                name: updatedObject.getFullyQualifiedName(),
++                                name: updatedObject.getFullyQualifiedName() + displayFormat.getInstanceSuffix(client, updatedObject), // [MBSE4SDV]
+                                 hasChildren: currentChildren.length > 0,
+                                 class: objType,
+                                 icon: self.getIcon(updatedObject),
+@@ -718,7 +725,7 @@ define(['js/logger',
+                                         //the node was present on the client side, render ist full data
+                                         childTreeNode = treeBrowser.createNode(nodes[objectId].treeNode, {
+                                             id: currentChildId,
+-                                            name: childNode.getFullyQualifiedName(),
++                                            name: childNode.getFullyQualifiedName() + displayFormat.getInstanceSuffix(client, childNode), // [MBSE4SDV]
+                                             hasChildren: (childNode.getChildrenIds()).length > 0,
+                                             class: getNodeClass(childNode, metaTypeInfo.isMetaNode),
+                                             icon: self.getIcon(childNode),
+diff --git a/node_modules/webgme/src/client/js/Utils/DisplayFormat.js b/node_modules/webgme/src/client/js/Utils/DisplayFormat.js
+index c6cf593..9ef883d 100644
+--- a/node_modules/webgme/src/client/js/Utils/DisplayFormat.js
++++ b/node_modules/webgme/src/client/js/Utils/DisplayFormat.js
+@@ -59,5 +59,25 @@ define(['js/Constants',
+         return result;
+     }
+ 
+-    return {resolve: resolve};
++    /**
++     * [MBSE4SDV] Returns ' (instance <prototype name>)' when the node is an instance of a prototype
++     * that is not a meta node, otherwise an empty string.
++     * @param {object} client
++     * @param {GMENode} node
++     * @returns {string}
++     */
++    function getInstanceSuffix(client, node) {
++        var baseId = node.getBaseId(),
++            baseNode;
++
++        if (!baseId || baseId === node.getMetaTypeId()) {
++            return '';
++        }
++
++        baseNode = client.getNode(baseId);
++
++        return baseNode ? ' (instance ' + baseNode.getFullyQualifiedName() + ')' : '';
++    }
++
++    return {resolve: resolve, getInstanceSuffix: getInstanceSuffix};
+ });
+\ No newline at end of file
+diff --git a/node_modules/webgme/src/client/js/Widgets/TreeBrowser/TreeBrowserWidget.js b/node_modules/webgme/src/client/js/Widgets/TreeBrowser/TreeBrowserWidget.js
+index ed2addc..3aa4d09 100644
+--- a/node_modules/webgme/src/client/js/Widgets/TreeBrowser/TreeBrowserWidget.js
++++ b/node_modules/webgme/src/client/js/Widgets/TreeBrowser/TreeBrowserWidget.js
+@@ -107,6 +107,16 @@ define(['js/logger',
+                 self.onNodeOpen.call(self, data.node.key);
+                 event.preventDefault();
+                 event.stopPropagation();
++
++                // [MBSE4SDV] When the root is loaded, reveal the active node (and its ancestors) in the tree.
++                var activePath = WebGMEGlobal.State.getActiveObject();
++                if (!data.node.key && activePath && typeof self.centerNode === 'function') {
++                    activePath.split('/').slice(1).reduce(function (nodePath, relId) {
++                        nodePath += '/' + relId;
++                        self.centerNode(nodePath);
++                        return nodePath;
++                    }, '');
++                }
+             },
+             //we don't need an activation here, it just messes up the UI
+             beforeActivate: function (event, data) {

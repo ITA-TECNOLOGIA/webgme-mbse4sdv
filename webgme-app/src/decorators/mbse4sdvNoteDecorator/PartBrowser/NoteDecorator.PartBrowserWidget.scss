@@ -1,0 +1,15 @@
+.part-browser {
+  .Note-decorator {
+    min-width: 100px;
+    width: 100px;
+    min-height: 44px;
+    .name {
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .resize-icon {
+      display: none;
+    }
+  }
+}

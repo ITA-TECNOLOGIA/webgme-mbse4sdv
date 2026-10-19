@@ -1,0 +1,35 @@
+.interaction-combined-fragment-decorator {
+  min-width: 240px;
+  min-height: 140px;
+  text-align: left;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.interaction-combined-fragment-decorator .name {
+  text-align: left;
+  text-transform: lowercase;
+  margin-top: 4px;
+  padding-left: 4px;
+  background-color: transparent;
+}
+
+.interaction-combined-fragment-decorator .attribute-container {
+  text-align: left;
+  white-space: pre-wrap;
+  padding: 4px;
+  height: calc(100% - 38px);
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.interaction-combined-fragment-decorator .title-separator {
+  border-top: 1px solid #000;
+  opacity: 0.4;
+}
+
+.selected .interaction-combined-fragment-decorator {
+  background-color: rgba(219, 234, 252, 0.18);
+  border-color: #52a8ec;
+}

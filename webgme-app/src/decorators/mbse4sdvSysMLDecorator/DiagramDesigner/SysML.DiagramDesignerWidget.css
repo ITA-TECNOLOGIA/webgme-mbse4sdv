@@ -1,0 +1,445 @@
+.SysML-decorator {
+  min-width: 60px;
+  min-height: calc(100% - 17px - 17px);
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.SysML-decorator .name {
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 90%;
+  text-align: center;
+}
+
+.SysML-decorator .justify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.SysML-decorator .title-separator {
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 6px 0;
+}
+
+.SysML-decorator .meta-table {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.SysML-decorator .meta-table table.meta-fields {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  text-align: left;
+}
+
+.SysML-decorator .meta-table td {
+  padding: 1px 4px;
+  vertical-align: top;
+}
+
+.SysML-decorator .meta-table td.meta-key {
+  font-weight: bold;
+  color: #555;
+  white-space: nowrap;
+  padding-right: 6px;
+}
+
+.SysML-decorator .meta-table td.meta-val {
+  word-break: break-word;
+}
+
+.SysML-decorator .meta-table hr.meta-separator {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 4px 0 2px 0;
+}
+
+.SysML-decorator .ports {
+  font-size: 10px;
+  min-height: 16px;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.SysML-decorator .ports .left,
+.SysML-decorator .ports .right {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 120px;
+  min-height: 1px;
+}
+
+.SysML-decorator .ports .center {
+  display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  min-width: 15px;
+  height: 1px;
+  flex: 1 1 auto;
+}
+
+.SysML-decorator .attribute-container {
+  font-family: "Fira Mono", "Bitstream Vera Sans Mono", Courier, monospace;
+  font-size: 12px;
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.SysML-decorator .attribute-container .description {
+  text-align: left;
+  white-space: pre-wrap;
+  overflow: auto;
+  min-height: 0;
+  min-width: 0;
+  flex: 1 1 auto;
+  word-break: break-word;
+}
+
+.SysML-decorator .attribute-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.SysML-decorator .attribute-container .top-ports,
+.SysML-decorator .attribute-container .bottom-ports {
+  flex: 0 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.SysML-decorator .attribute-container .sysml-ports {
+  min-height: 0;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  padding-bottom: 14px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.SysML-decorator .attribute-container .sysml-ports .left,
+.SysML-decorator .attribute-container .sysml-ports .center,
+.SysML-decorator .attribute-container .sysml-ports .right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  min-height: 0;
+  overflow: visible;
+}
+
+.SysML-decorator .port {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-height: 15px;
+  line-height: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+}
+
+.SysML-decorator .port:hover {
+  cursor: pointer;
+}
+
+.SysML-decorator .port .title-wrapper {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.SysML-decorator .port .title {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.SysML-decorator .port img.svg-icon {
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  height: 11px;
+  width: 5px;
+}
+
+.SysML-decorator .port span.dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #4b5563;
+  position: absolute;
+  top: 6px;
+}
+
+.SysML-decorator .port.w-icon span.dot {
+  display: none;
+}
+
+.SysML-decorator .ports .left .port .title-wrapper {
+  text-align: left;
+}
+
+.SysML-decorator .ports .left .port img.svg-icon {
+  left: 4px;
+}
+
+.SysML-decorator .ports .left .port span.dot {
+  left: 4px;
+}
+
+.SysML-decorator .ports .right .port .title-wrapper {
+  text-align: right;
+}
+
+.SysML-decorator .ports .right .port img.svg-icon {
+  right: 4px;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.SysML-decorator .ports .right .port span.dot {
+  right: 4px;
+}
+
+.SysML-decorator .ports .left .port {
+  padding-left: 14px;
+  padding-right: 4px;
+  text-align: left;
+}
+
+.SysML-decorator .ports .right .port {
+  padding-right: 14px;
+  padding-left: 4px;
+  text-align: right;
+}
+
+.SysML-decorator .top-ports,
+.SysML-decorator .bottom-ports {
+  width: 100%;
+  left: 0;
+  height: 0;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.SysML-decorator .top-ports .port,
+.SysML-decorator .bottom-ports .port {
+  display: inline;
+  height: 11px;
+}
+
+.SysML-decorator .top-ports .port .title-wrapper,
+.SysML-decorator .bottom-ports .port .title-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+}
+
+.SysML-decorator .top-ports .port img.svg-icon,
+.SysML-decorator .bottom-ports .port img.svg-icon {
+  display: inline-block;
+  position: relative;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 11px;
+  height: 5px;
+}
+
+.SysML-decorator .top-ports .port span.dot,
+.SysML-decorator .bottom-ports .port span.dot {
+  display: inline-block;
+  background: #666666;
+  border: 1px solid #666666;
+  position: relative;
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 7px;
+  height: 4px;
+  left: auto;
+}
+
+.SysML-decorator .top-ports .port img.svg-icon {
+  top: -8px;
+}
+
+.SysML-decorator .top-ports .port span.dot {
+  top: -9px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.SysML-decorator .bottom-ports .port img.svg-icon {
+  top: 3px;
+}
+
+.SysML-decorator .bottom-ports .port span.dot {
+  top: 1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.SysML-decorator .connector.has-ports {
+  visibility: hidden;
+}
+
+.SysML-decorator .ports .port div.connector {
+  top: 0.5px;
+}
+
+.SysML-decorator .ports .port div.connector:hover {
+  top: -3.5px;
+  z-index: 12;
+}
+
+.SysML-decorator .ports .left .port .connector {
+  left: -6px;
+}
+
+.SysML-decorator .ports .left .port .connector:hover {
+  left: -9px;
+}
+
+.SysML-decorator .ports .right .port .connector {
+  right: -6px;
+  left: auto;
+}
+
+.SysML-decorator .ports .right .port .connector:hover {
+  right: -9px;
+  left: auto;
+}
+
+.SysML-decorator .bottom-ports div.connector {
+  top: 6px;
+}
+
+.SysML-decorator .top-ports div.connector {
+  top: -9px;
+}
+
+.SysML-decorator .resize-icon {
+  position: absolute;
+  right: -6px;
+  bottom: -7px;
+  padding: 5px 7px 5px 3px;
+  font-size: 14px;
+  cursor: nwse-resize;
+}
+
+.SysML-decorator .fa-rotate-45 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.SysML-decorator .connector {
+  background-color: #fefefe;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid blue;
+  z-index: 10;
+}
+
+.SysML-decorator .connector:hover {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  height: 24px;
+  width: 24px;
+  z-index: 12;
+}
+
+.SysML-decorator .connector:hover.top {
+  margin-left: -12px;
+  top: -16px;
+}
+
+.SysML-decorator .connector:hover.bottom {
+  margin-left: -12px;
+  bottom: -16px;
+}
+
+.SysML-decorator .connector:hover.left {
+  margin-top: -6px;
+  left: -16px;
+}
+
+.SysML-decorator .connector:hover.right {
+  margin-top: -6px;
+  right: -16px;
+}
+
+.SysML-decorator .connector.top {
+  margin-left: -8px;
+  left: 50%;
+  top: -8px;
+}
+
+.SysML-decorator .connector.top-left {
+  left: -8px;
+  top: -8px;
+}
+
+.SysML-decorator .connector.bottom {
+  margin-left: -8px;
+  left: 50%;
+  bottom: -8px;
+}
+
+.SysML-decorator .connector.left {
+  top: calc(50% - 8px);
+  left: -8px;
+}
+
+.SysML-decorator .connector.right {
+  top: calc(50% - 8px);
+  right: -8px;
+}
+
+.selected .SysML-decorator {
+  border: 1px solid #52a8ec;
+  background-color: #dbeafc;
+}

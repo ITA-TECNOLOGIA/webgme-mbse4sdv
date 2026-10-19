@@ -1,0 +1,10 @@
+.part-browser .mbse4sdvTextRelationDecorator-decorator {
+  min-width: 100px;
+  width: 100px;
+  min-height: 44px; }
+  .part-browser .mbse4sdvTextRelationDecorator-decorator .name {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .part-browser .mbse4sdvTextRelationDecorator-decorator .resize-icon {
+    display: none; }

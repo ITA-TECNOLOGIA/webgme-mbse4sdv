@@ -1,0 +1,39 @@
+{
+  "name": "blob-util",
+  "version": "1.3.0",
+  "description": "Utilities for working with Blob objects in the browser",
+  "homepage": "https://github.com/nolanlawson/blob-util",
+  "authors": [
+    "Nolan Lawson <nolan.lawson@gmail.com>"
+  ],
+  "main": "dist/blob-util.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "blob",
+    "blobs",
+    "binary",
+    "util",
+    "utils"
+  ],
+  "license": "Apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendor",
+    "doc"
+  ],
+  "_release": "1.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.3.0",
+    "commit": "01a9fa74cd95a32c8db15df9d8390e70fe12da3f"
+  },
+  "_source": "https://github.com/nolanlawson/blob-util.git",
+  "_target": "1.3.0",
+  "_originalSource": "nolanlawson/blob-util"
+}

@@ -1,0 +1,34 @@
+/**
+ * This file is for any scss that you may want for this visualizer.
+ */
+
+ .excel-visualizer {
+  outline: none; 
+}
+td > input {
+  width:100%;
+}
+.divForm{
+  margin-bottom: 15px;
+}
+.matrix-requirement  {
+  width: 100%;
+  border: 1px solid #000;
+}
+.matrix-requirement> tbody> tr > td {
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 0.3em;
+  caption-side: bottom;
+}
+.caption {
+  padding: 0.3em;
+  color: #fff;
+   background: #000;
+}
+.matrix-requirement > thead> tr > th {
+  background: #eee;
+  cursor: pointer;
+}

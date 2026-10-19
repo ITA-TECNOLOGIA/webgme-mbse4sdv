@@ -1,0 +1,10 @@
+.part-browser .EnrichedNote-decorator {
+  min-width: 100px;
+  width: 100px;
+  min-height: 44px; }
+  .part-browser .EnrichedNote-decorator .name {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .part-browser .EnrichedNote-decorator .resize-icon {
+    display: none; }

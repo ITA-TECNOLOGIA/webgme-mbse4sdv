@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Secrets and local environment (never commit)
+.env
+*.pem
+token_keys/
+
+# Runtime data
+blob-local-storage/
+*.log
+tmp/
+test-tmp/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store

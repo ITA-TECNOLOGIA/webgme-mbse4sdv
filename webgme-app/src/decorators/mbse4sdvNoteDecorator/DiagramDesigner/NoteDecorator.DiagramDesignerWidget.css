@@ -1,0 +1,119 @@
+.Note-decorator {
+  min-width: 60px;
+  min-height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px;
+  text-align: center; }
+  .Note-decorator .name {
+    margin-top: 10px;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center; }
+  .Note-decorator .attribute-container {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: calc(100% - 17px - 17px);
+    width: 100%;
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    padding: 2px 4px;
+    box-sizing: border-box; }
+    .Note-decorator .attribute-container h1,
+    .Note-decorator .attribute-container h2,
+    .Note-decorator .attribute-container h3,
+    .Note-decorator .attribute-container h4,
+    .Note-decorator .attribute-container h5,
+    .Note-decorator .attribute-container h6 {
+      margin: 4px 0 2px 0;
+      font-weight: bold;
+      line-height: 1.2; }
+    .Note-decorator .attribute-container h1 { font-size: 16px; }
+    .Note-decorator .attribute-container h2 { font-size: 14px; }
+    .Note-decorator .attribute-container h3,
+    .Note-decorator .attribute-container h4,
+    .Note-decorator .attribute-container h5,
+    .Note-decorator .attribute-container h6 { font-size: 12px; }
+    .Note-decorator .attribute-container ul,
+    .Note-decorator .attribute-container ol {
+      margin: 2px 0;
+      padding-left: 16px; }
+    .Note-decorator .attribute-container li { margin: 1px 0; }
+    .Note-decorator .attribute-container strong { font-weight: bold; }
+    .Note-decorator .attribute-container em { font-style: italic; }
+    .Note-decorator .attribute-container code {
+      font-family: 'Fira Mono',"Bitstream Vera Sans Mono",Courier,monospace;
+      background-color: rgba(0,0,0,0.06);
+      padding: 0 2px;
+      border-radius: 2px; }
+    .Note-decorator .attribute-container .attribute-field .title {
+      font-weight: bold;
+      text-align: left; }
+    .Note-decorator .attribute-container .attribute-field .content {
+      height: calc(100% - 19px);
+      width: 100%;
+      resize: none; }
+  .Note-decorator .resize-icon {
+    position: absolute;
+    right: -6px;
+    bottom: -7px;
+    padding: 5px 7px 5px 3px;
+    font-size: 14px;
+    cursor: nwse-resize; }
+  .Note-decorator .fa-rotate-45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .Note-decorator .connector {
+    background-color: #fefefe;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    cursor: pointer;
+    border: 1px solid blue;
+    z-index: 10; }
+    .Note-decorator .connector:hover {
+      border-color: rgba(82, 168, 236, 0.8);
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      height: 24px;
+      width: 24px;
+      z-index: 12; }
+      .Note-decorator .connector:hover.top {
+        margin-left: -12px;
+        top: -16px; }
+      .Note-decorator .connector:hover.bottom {
+        margin-left: -12px;
+        bottom: -16px; }
+      .Note-decorator .connector:hover.left {
+        margin-top: -6px;
+        left: -16px; }
+      .Note-decorator .connector:hover.right {
+        margin-top: -6px;
+        right: -16px; }
+    .Note-decorator .connector.top {
+      margin-left: -8px;
+      left: 50%;
+      top: -8px; }
+    .Note-decorator .connector.bottom {
+      margin-left: -8px;
+      left: 50%;
+      bottom: -8px; }
+    .Note-decorator .connector.left {
+      top: calc(50% - 8px);
+      left: -8px; }
+    .Note-decorator .connector.right {
+      top: calc(50% - 8px);
+      right: -8px; }
+
+.selected .Note-decorator {
+  border: 1px solid #52a8ec;
+  background-color: #dbeafc; }

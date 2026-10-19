@@ -1,0 +1,42 @@
+{
+  "name": "mbse4sdv-webgme-app",
+  "version": "0.1.0",
+  "description": "MBSE4SDV (Model-Based Systems Engineering for Software-Defined Vehicles) modeling environment built on WebGME.",
+  "private": true,
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "patch-package && node scripts/build-webgme-dist.js",
+    "start": "node app.js",
+    "users": "node ./node_modules/webgme-engine/src/bin/usermanager.js",
+    "import": "node ./node_modules/webgme-engine/src/bin/import.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "codemirror": "5.65.21",
+    "express": "^4.18.2",
+    "patch-package": "8.0.1",
+    "q": "^1.5.1",
+    "webgme": "2.43.0",
+    "webgme-codeeditor": "3.6.19",
+    "webgme-hfsm": "1.8.0",
+    "webgme-to-json": "1.0.4"
+  },
+  "overrides": {
+    "webgme-engine": "2.30.0"
+  },
+  "devDependencies": {
+    "adm-zip": "0.5.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv.git",
+    "directory": "webgme-app"
+  },
+  "homepage": "https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv#readme",
+  "bugs": {
+    "url": "https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv/issues"
+  }
+}

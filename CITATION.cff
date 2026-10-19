@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use MBSE4SDV, please cite it as below."
+title: "MBSE4SDV: Model-Based Systems Engineering for Software-Defined Vehicles"
+type: software
+authors:
+  - name: "Instituto Tecnológico de Aragón (ITA)"
+    website: "https://www.ita.es"
+license: MIT
+version: 0.1.0
+repository-code: "https://github.com/ITA-TECNOLOGIA/webgme-mbse4sdv"
+abstract: >-
+  Collaborative, web-based Model-Based Systems Engineering (MBSE) workbench for traceable development of
+  Software-Defined Vehicles, built on WebGME. It provides SDV lifecycle metamodels, custom visualisers and
+  decorators, traceability and HFSM code generation plugins, a REST API and an MCP server.
+  Developed in the CODE4EV project (EU grant agreement No 101192739).
+keywords:
+  - MBSE
+  - software-defined vehicle
+  - SysML
+  - WebGME
+  - traceability
+  - MCP

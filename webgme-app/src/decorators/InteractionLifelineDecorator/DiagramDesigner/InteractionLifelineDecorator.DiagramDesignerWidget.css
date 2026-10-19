@@ -1,0 +1,93 @@
+.interaction-lifeline-decorator {
+  width: 150px;
+  min-height: 520px;
+  position: relative;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.interaction-lifeline-decorator__header {
+  border: 1px solid #59673d;
+  background: linear-gradient(180deg, #f6f9ef 0%, #e6efd6 100%);
+  border-radius: 10px;
+  padding: 10px 8px;
+  min-height: 52px;
+  box-sizing: border-box;
+}
+
+.interaction-lifeline-decorator__name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #28311b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.interaction-lifeline-decorator__block {
+  margin-top: 3px;
+  font-size: 11px;
+  color: #5d6750;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.interaction-lifeline-decorator__line {
+  width: 2px;
+  height: 450px;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    to bottom,
+    #6b6b6b 0,
+    #6b6b6b 10px,
+    transparent 10px,
+    transparent 18px
+  );
+}
+
+.interaction-lifeline-decorator .connector {
+  position: absolute;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border: 1px solid #3f5f95;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
+  cursor: crosshair;
+  z-index: 12;
+  opacity: 0;
+  transition: opacity 0.12s ease-in-out, box-shadow 0.12s ease-in-out;
+}
+
+.designer-item:hover .interaction-lifeline-decorator .connector,
+.interaction-lifeline-decorator .connector:hover,
+.interaction-lifeline-decorator .connector.ui-draggable-dragging {
+  opacity: 1;
+}
+
+.interaction-lifeline-decorator .connector:hover {
+  box-shadow: 0 0 0 3px rgba(63, 95, 149, 0.18);
+}
+
+.interaction-lifeline-decorator .connector.top {
+  top: 74px;
+}
+
+.interaction-lifeline-decorator .connector.upper {
+  top: 170px;
+}
+
+.interaction-lifeline-decorator .connector.middle {
+  top: 270px;
+}
+
+.interaction-lifeline-decorator .connector.lower {
+  top: 370px;
+}
+
+.interaction-lifeline-decorator .connector.bottom {
+  bottom: 10px;
+}
