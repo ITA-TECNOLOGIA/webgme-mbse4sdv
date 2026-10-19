@@ -80,7 +80,7 @@ Data is kept in Docker volumes (`mongo-data`, `webgme-keys`, `webgme-blobs`); `d
                ▼                                         ▼
  ┌───────────────────────────────┐   REST    ┌──────────────────────┐
  │ webgme-app  (port 8888)       │◄──────────│ mcp-server (3000)    │
- │  WebGME 2.43 (unmodified npm  │ /mbse4sdv │  tools: login, get_*,│
+ │  WebGME 2.50 (unmodified npm  │ /mbse4sdv │  tools: login, get_*,│
  │  package + small patch)       │   /api    │  create/modify/      │
  │  + webgme-hfsm 1.8 (npm)      │           │  delete nodes, sets, │
  │  + MBSE4SDV plugins,          │           │  pointers, layout    │
@@ -145,8 +145,9 @@ npm run users -- useradd -c -s admin admin@example.org <password>
 npm start            # http://localhost:8888
 ```
 
-Node.js 18+ and MongoDB are required. The authentication keys are read from `webgme-app/token_keys/`
-(`private_key`, `public_key`; RSA ≥ 2048 bits, never committed) or from `JWT_PRIVATE_KEY` / `JWT_PUBLIC_KEY`.
+Node.js 20.19+ (22 LTS recommended) and MongoDB are required. The authentication keys are read from
+`webgme-app/token_keys/` (`private_key`, `public_key`; RSA ≥ 2048 bits, never committed) or from
+`JWT_PRIVATE_KEY` / `JWT_PUBLIC_KEY`.
 Projects created with the pre-release version of the tool can be converted with the
 [migration scripts](webgme-app/scripts/migration/README.md).
 
@@ -154,7 +155,7 @@ Projects created with the pre-release version of the tool can be converted with 
 
 - The hierarchical view and the traceability view are slow or show no data when opened on the root package of
   very large models (such as the example, with ~18,000 nodes); open them on a specific model instead.
-- Based on WebGME 2.43 / webgme-engine 2.30. Upgrading to later WebGME releases requires re-applying the
+- Based on WebGME 2.50.1 / webgme-engine 2.32.1. Upgrading to later WebGME releases requires re-applying the
   patch in `webgme-app/patches`.
 
 ## License

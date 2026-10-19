@@ -67,12 +67,12 @@ files of this release.
 
 WebGME application (webgme-app)
 
-webgme v.2.43.0
+webgme v.2.50.1
 License: MIT (See Section B of THIRD_PARTY_LICENSES)
 https://github.com/webgme/webgme
-(modified at install time by webgme-app/patches/webgme+2.43.0.patch; see THIRD_PARTY_LICENSES)
+(modified at install time by webgme-app/patches/webgme+2.50.1.patch; see THIRD_PARTY_LICENSES)
 
-webgme-engine v.2.30.0
+webgme-engine v.2.32.1
 License: MIT (See Section B of THIRD_PARTY_LICENSES)
 https://github.com/webgme/webgme-engine
 
@@ -128,7 +128,7 @@ Runtime environment
 
 Node.js v.20
 License: MIT, with third-party components under their own licenses
-https://nodejs.org (Docker image node:20-bookworm-slim)
+https://nodejs.org (Docker image node:22-bookworm-slim)
 
 MongoDB Community Server v.7
 License: Server Side Public License v1 (SSPL-1.0)

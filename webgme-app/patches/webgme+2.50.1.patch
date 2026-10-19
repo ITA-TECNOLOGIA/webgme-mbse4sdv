@@ -44,7 +44,7 @@ index 0f9c621..e6c6aa5 100644
              WebGMEGlobal.State.registerActiveObject(gmeID);
          }
 diff --git a/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js b/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js
-index df22118..5c911f6 100644
+index 410f313..b71e5da 100644
 --- a/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js
 +++ b/node_modules/webgme/src/client/js/Panels/ObjectBrowser/TreeBrowserControl.js
 @@ -14,7 +14,8 @@ define(['js/logger',
@@ -88,7 +88,7 @@ index df22118..5c911f6 100644
          treeBrowser.onNodeDoubleClicked = function (nodeId) {
              logger.debug('Firing onNodeDoubleClicked with nodeId: ' + nodeId);
              //var settings = {};
-@@ -606,7 +613,7 @@ define(['js/logger',
+@@ -613,7 +620,7 @@ define(['js/logger',
  
                              //create the node's descriptor for the tree-browser widget
                              nodeDescriptor = {
@@ -97,7 +97,7 @@ index df22118..5c911f6 100644
                                  hasChildren: currentChildren.length > 0,
                                  class: objType,
                                  icon: self.getIcon(updatedObject),
-@@ -636,7 +643,7 @@ define(['js/logger',
+@@ -643,7 +650,7 @@ define(['js/logger',
  
                              //create the node's descriptor for the treebrowser widget
                              nodeDescriptor = {
@@ -106,7 +106,7 @@ index df22118..5c911f6 100644
                                  hasChildren: currentChildren.length > 0,
                                  class: objType,
                                  icon: self.getIcon(updatedObject),
-@@ -718,7 +725,7 @@ define(['js/logger',
+@@ -725,7 +732,7 @@ define(['js/logger',
                                          //the node was present on the client side, render ist full data
                                          childTreeNode = treeBrowser.createNode(nodes[objectId].treeNode, {
                                              id: currentChildId,

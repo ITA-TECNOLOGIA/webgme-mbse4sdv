@@ -1,5 +1,5 @@
 # MBSE4SDV MCP server (Streamable HTTP transport on /mcp)
-FROM node:20-bookworm-slim
+FROM node:22-bookworm-slim
 
 ENV NODE_ENV=production \
     MCP_TRANSPORT=http \

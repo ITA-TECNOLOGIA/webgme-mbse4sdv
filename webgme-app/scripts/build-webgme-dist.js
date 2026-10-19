@@ -2,7 +2,6 @@
 /**
  * Rebuilds the WebGME client bundle (src/client/dist/webgme.<version>.dist.build.js) after
  * patch-package has applied patches/webgme+*.patch, so that the browser loads the patched modules.
- * It also makes the bundle use the webgme-engine version pinned in package.json "overrides".
  */
 'use strict';
 

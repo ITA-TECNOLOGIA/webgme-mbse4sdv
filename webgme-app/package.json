@@ -12,20 +12,17 @@
     "import": "node ./node_modules/webgme-engine/src/bin/import.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.19.0"
   },
   "dependencies": {
     "codemirror": "5.65.21",
     "express": "^4.18.2",
     "patch-package": "8.0.1",
     "q": "^1.5.1",
-    "webgme": "2.43.0",
+    "webgme": "2.50.1",
     "webgme-codeeditor": "3.6.19",
     "webgme-hfsm": "1.8.0",
     "webgme-to-json": "1.0.4"
-  },
-  "overrides": {
-    "webgme-engine": "2.30.0"
   },
   "devDependencies": {
     "adm-zip": "0.5.18"

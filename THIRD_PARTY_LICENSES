@@ -24,15 +24,15 @@ A) THIRD-PARTY COMPONENTS AND NOTICES
 
 A.1 Modified components and source code derived from other projects
 
-webgme 2.43.0
+webgme 2.50.1
 license = MIT (See Section B)
 copyright notice = Copyright (c) 2012-2023 Vanderbilt University, ISIS
-source = https://github.com/webgme/webgme/tree/v2.43.0
+source = https://github.com/webgme/webgme/tree/v2.50.1
 Modified for MBSE4SDV 0.1.0
 Modifications: Copyright (c) 2026 Instituto Tecnológico de Aragón
 Author: Instituto Tecnológico de Aragón
 Modification licensed under MIT
-- webgme-app/patches/webgme+2.43.0.patch: changes to webgme applied at install
+- webgme-app/patches/webgme+2.50.1.patch: changes to webgme applied at install
   time with patch-package (see webgme-app/PATCHES.md).
 - The note decorators and the DiagramDesigner-based widgets are derived from
   WebGME source code (original authors are kept in the file headers).

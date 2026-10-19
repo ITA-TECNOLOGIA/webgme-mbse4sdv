@@ -4,7 +4,7 @@ MBSE4SDV is built as a WebGME application on top of the **unmodified** `webgme` 
 Everything is implemented as WebGME components (plugins, decorators, visualizers, styles) except the
 small set of changes below, which cannot be done from outside the core.
 
-They are kept in [`patches/webgme+2.43.0.patch`](patches/webgme+2.43.0.patch) and applied automatically by
+They are kept in [`patches/webgme+2.50.1.patch`](patches/webgme+2.50.1.patch) and applied automatically by
 [patch-package](https://github.com/ds300/patch-package) on `npm install`. Because WebGME serves a pre-built
 client bundle, `postinstall` then rebuilds it ([`scripts/build-webgme-dist.js`](scripts/build-webgme-dist.js)).
 Every patched line is marked with `[MBSE4SDV]`.
