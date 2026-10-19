@@ -114,9 +114,10 @@ validation) are represented by the *needs*, *functional*, *system-of-systems*, *
 *subsystem* and *realisation* perspectives, keeping traceability across them. The methodology is described in
 the public CODE4EV deliverable **D2.1 – SDV design methodology** (see https://code4ev.eu).
 
-MBSE4SDV is also contributed to the [FEDERATE](https://federate-sdv.eu) SDV ecosystem as the building block
-**BB_CODE4EV_MBSE** (functional clusters: Design, Requirements, Generator), published in
-[CSA-FEDERATE/Proposed-BuildingBlocks](https://github.com/CSA-FEDERATE/Proposed-BuildingBlocks).
+MBSE4SDV has been put forward to the [FEDERATE](https://federate-sdv.eu) SDV ecosystem as the building block
+**BB_CODE4EV_MBSE** (tag BB-EST; functional clusters: Design, Requirements, Generator). For the time being this
+is only a proposal: it has not yet been accepted into the
+[CSA-FEDERATE/Proposed-BuildingBlocks](https://github.com/CSA-FEDERATE/Proposed-BuildingBlocks) repository.
 
 ## REST API and MCP server
 
