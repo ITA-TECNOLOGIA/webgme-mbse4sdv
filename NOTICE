@@ -36,43 +36,78 @@ hierarchical finite state machines, an example project, a REST API and an MCP
 server that exposes the model operations to LLM clients.
 
 
+DATA MODELS AND SPECIFICATIONS
+
+The taxonomy metamodels of the example project
+(webgme-app/src/seeds/Mbse4sdvExample) contain data definitions (signal and
+entity names, their hierarchy, attributes and descriptions) based on the
+following public specifications. These definitions have been represented as
+WebGME model elements by ITA. No source code or files from these projects are
+included in or distributed with this software.
+
+COVESA Vehicle Signal Specification (VSS) v.6.1
+License: Mozilla Public License 2.0 (MPL-2.0)
+Copyright (c) 2016 Contributors to COVESA
+https://github.com/COVESA/vehicle_signal_specification/tree/v6.1
+
+Smart Data Models - dataModel.Transportation (TransportStation) and
+dataModel.TourismDestinations (Event)
+License: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+Smart Data Models Program contributors
+https://github.com/smart-data-models/dataModel.Transportation/tree/master/TransportStation
+https://github.com/smart-data-models/dataModel.TourismDestinations/tree/master/Event
+
+
 RELATED PUBLICATIONS
 
-There are no publications specifically related to this software. The
-methodology it implements is described in the public CODE4EV deliverable
-D2.1 - SDV design methodology (https://code4ev.eu).
+Armengaud, E., Permann, R., Joergler, S., Barcelona, M. A., García, L.,
+Rodriguez, J. M., Ivanov, V., Li, Z., Nguyen Quoc, T., Rodrigues, S.,
+Kowalczyk, B. and Avdić Čaušević, A. (2026). Collaborative Development
+Framework for Electric-Based Software-Defined Vehicles - The European Research
+Project CODE4EV. WCX SAE World Congress Experience, SAE International, April
+2026. SAE Technical Paper 2026-01-0113. ISSN 0148-7191.
+https://doi.org/10.4271/2026-01-0113
 
-
-APIS
-
-This software does not require access to third-party APIs.
-The included MCP server can be used by LLM clients chosen by the user. Such
-clients are external services for which the user shall bear sole
-responsibility, including responsibility for maintaining the necessary access,
-licences and authorisations, and for ensuring regulatory compliance.
+The methodology implemented by this software is described in the public
+CODE4EV deliverable D2.1 - SDV design methodology. The public deliverables of
+the project are available at https://code4ev.eu/home/results/ and in the
+CODE4EV community on Zenodo (https://zenodo.org/communities/code4ev/).
 
 
 REQUIREMENTS
 
 This software requires certain third-party components under open-source
-licenses. These components are not included in or distributed with this
-software and must be obtained and installed separately by the user (they are
-downloaded by npm and Docker when the software is built). Some of these
-components may be required for loading, executing, or operating the software at
-runtime.
+licenses to be built and executed. These components are not included in or
+distributed with this software: they are downloaded automatically from their
+public registries (npm registry, Docker Hub) when the software is built, in one
+of the following two ways.
+
+- With Docker (recommended): the user only needs Docker Engine with Docker
+  Compose. "docker compose up --build" pulls the Node.js and MongoDB images
+  and runs "npm ci" inside the images, which downloads the npm packages listed
+  below and their dependencies.
+- Manual installation: the user needs Node.js, MongoDB and git installed.
+  Running "npm install" in webgme-app and mcp-server downloads the npm packages
+  listed below and their dependencies (git is used by bower to fetch the
+  client libraries of webgme-codeeditor).
+
+The npm packages listed below are the direct dependencies of each part; npm
+also downloads their transitive dependencies, each under its own license.
 This information is provided solely for transparency and traceability purposes.
 It does not modify, replace, or extend the license terms applicable to each
 third-party component. The versions are those resolved in the package-lock.json
 files of this release.
 
-WebGME application (webgme-app)
+npm packages - WebGME application (webgme-app)
 
 webgme v.2.50.1
 License: MIT (See Section B of THIRD_PARTY_LICENSES)
 https://github.com/webgme/webgme
-(modified at install time by webgme-app/patches/webgme+2.50.1.patch; see THIRD_PARTY_LICENSES)
+(downloaded unmodified from npm and patched afterwards, at install time, with
+webgme-app/patches/webgme+2.50.1.patch; the patch is listed as a modification
+in Section A.1 of THIRD_PARTY_LICENSES)
 
-webgme-engine v.2.32.1
+webgme-engine v.2.32.1 (dependency of webgme)
 License: MIT (See Section B of THIRD_PARTY_LICENSES)
 https://github.com/webgme/webgme-engine
 
@@ -110,7 +145,7 @@ adm-zip v.0.5.18 (development only, used by the seed export script)
 License: MIT (See Section B of THIRD_PARTY_LICENSES)
 https://github.com/cthackers/adm-zip
 
-MCP server (mcp-server)
+npm packages - MCP server (mcp-server)
 
 @modelcontextprotocol/sdk v.1.32.1
 License: MIT (See Section B of THIRD_PARTY_LICENSES)
@@ -125,8 +160,10 @@ License: MIT (See Section B of THIRD_PARTY_LICENSES)
 https://github.com/expressjs/express
 
 Runtime environment
+(pulled as Docker images by Docker Compose, or installed by the user for a
+manual installation)
 
-Node.js v.20
+Node.js v.20.19 or later (v.22 in the Docker images)
 License: MIT, with third-party components under their own licenses
 https://nodejs.org (Docker image node:22-bookworm-slim)
 
@@ -134,6 +171,12 @@ MongoDB Community Server v.7
 License: Server Side Public License v1 (SSPL-1.0)
 https://www.mongodb.com (Docker image mongo:7)
 
-Docker Engine with Docker Compose
+Installed by the user
+
+Docker Engine with Docker Compose (Docker installation)
 License: Apache-2.0
 https://www.docker.com
+
+Git (manual installation; installed inside the build image with Docker)
+License: GPL-2.0
+https://git-scm.com

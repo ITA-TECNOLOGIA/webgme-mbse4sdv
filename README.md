@@ -26,7 +26,8 @@ open-source web-based modelling environment from Vanderbilt University.
 - **Example project** of an Emergency Brake Light Control System modelled along the lifecycle phases, with
   vehicle-signal and transportation taxonomies derived from
   [COVESA VSS](https://github.com/COVESA/vehicle_signal_specification) and
-  [Smart Data Models – Transportation](https://github.com/smart-data-models/dataModel.Transportation).
+  [Smart Data Models – Transportation](https://github.com/smart-data-models/dataModel.Transportation)
+  (see [NOTICE](NOTICE)).
 - **Programmatic access**: a REST API and an **MCP server** so that LLM-based assistants can query and edit
   models (with the permissions of the logged-in user).
 
@@ -112,7 +113,9 @@ The metamodels and the example follow the CODE4EV SDV design methodology: an ext
 implementation, unit / subsystem / integration / system testing, validation, deployment and operational
 validation) are represented by the *needs*, *functional*, *system-of-systems*, *hardware/software*,
 *subsystem* and *realisation* perspectives, keeping traceability across them. The methodology is described in
-the public CODE4EV deliverable **D2.1 – SDV design methodology** (see https://code4ev.eu).
+the public CODE4EV deliverable **D2.1 – SDV design methodology**, available with the other public deliverables at
+[code4ev.eu/home/results](https://code4ev.eu/home/results/) and in the
+[CODE4EV community on Zenodo](https://zenodo.org/communities/code4ev/).
 
 MBSE4SDV has been put forward to the [FEDERATE](https://federate-sdv.eu) SDV ecosystem as the building block
 **BB_CODE4EV_MBSE** (tag BB-EST; functional clusters: Design, Requirements, Generator). For the time being this
@@ -146,7 +149,8 @@ npm run users -- useradd -c -s admin admin@example.org <password>
 npm start            # http://localhost:8888
 ```
 
-Node.js 20.19+ (22 LTS recommended) and MongoDB are required. The authentication keys are read from
+Node.js 20.19+ (22 LTS recommended), MongoDB and git are required (git is used by bower, during `npm install`,
+to fetch the client libraries of `webgme-codeeditor`). The authentication keys are read from
 `webgme-app/token_keys/` (`private_key`, `public_key`; RSA ≥ 2048 bits, never committed) or from
 `JWT_PRIVATE_KEY` / `JWT_PUBLIC_KEY`.
 Projects created with the pre-release version of the tool can be converted with the
@@ -161,10 +165,10 @@ Projects created with the pre-release version of the tool can be converted with 
 
 ## License
 
-MBSE4SDV is released under the [MIT License](LICENSE). Third-party components and data included in this
-repository keep their own licenses; they are listed, with their license texts, in
-[THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES).
-Funding, description and the third-party components required at build or run time are listed in [NOTICE](NOTICE).
+MBSE4SDV is released under the [MIT License](LICENSE). Third-party components included in this repository keep
+their own licenses; they are listed, with their license texts, in [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES).
+Funding, description, the public specifications on which the example taxonomies are based, related publications
+and the third-party components required at build or run time are listed in [NOTICE](NOTICE).
 
 ## Acknowledgement
 
