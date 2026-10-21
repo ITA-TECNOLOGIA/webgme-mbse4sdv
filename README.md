@@ -113,7 +113,8 @@ The metamodels and the example follow the CODE4EV SDV design methodology: an ext
 implementation, unit / subsystem / integration / system testing, validation, deployment and operational
 validation) are represented by the *needs*, *functional*, *system-of-systems*, *hardware/software*,
 *subsystem* and *realisation* perspectives, keeping traceability across them. The methodology is described in
-the public CODE4EV deliverable **D2.1 – SDV design methodology**, available with the other public deliverables at
+the public CODE4EV deliverable **D2.1 – SDV design methodology**, which will be available on the project page in CORDIS
+([doi.org/10.3030/101192739](https://doi.org/10.3030/101192739)). Other results of the project are available at
 [code4ev.eu/home/results](https://code4ev.eu/home/results/) and in the
 [CODE4EV community on Zenodo](https://zenodo.org/communities/code4ev/).
 
