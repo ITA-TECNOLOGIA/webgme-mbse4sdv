@@ -37,6 +37,38 @@ Modification licensed under MIT
 - The note decorators and the DiagramDesigner-based widgets are derived from
   WebGME source code (original authors are kept in the file headers).
 
+hierarchical-model-editor 0.1.0 - HierarchicalModelEditor visualizer
+license = MIT (See Section B)
+copyright notice = Copyright (c) 2019 Vanderbilt University, ISIS
+source = https://github.com/webgme/hierarchical-model-editor/tree/243eec7
+files = webgme-app/src/visualizers/panels/HierarchicalModelEditor
+note = the original files carry the header "DISTRIBUTION STATEMENT C: U.S.
+       Government agencies and their contractors. Other requests shall be
+       referred to DARPA's Public Release Center via email at prc@darpa.mil."
+       The original repository is publicly available on GitHub and is
+       published under the MIT License by its authors. The header is kept as
+       it appears in the original source, followed by a note that refers to
+       this file.
+Modified for MBSE4SDV 0.1.0
+Modifications: Copyright (c) 2026 Instituto Tecnológico de Aragón
+Author: Instituto Tecnológico de Aragón
+Modification licensed under MIT
+- CONSTANTS.js added, and HierarchicalModelEditorPanel.js loads it
+  ('./CONSTANTS') instead of 'js/Constants'.
+- A note on the origin and license of the files added after the distribution
+  statement in their headers.
+- HierarchicalModelEditor.bundle.js is the webpack bundle of the original
+  repository (the copyright and license notices of the bundled modules are
+  kept in the file). Its license is MIT (See Section B), except
+  hoist-non-react-statics (Copyright 2015, Yahoo! Inc.) and warning
+  (Copyright 2014-2015, Facebook, Inc.), which are BSD-3-Clause (See
+  Section B). Bundled components: React 16.7.0 and react-dom (Copyright (c)
+  Facebook, Inc. and its affiliates), Material-UI (@material-ui/core,
+  @material-ui/icons), redux, react-redux, jss and its plugins, lodash, dagre,
+  graphlib, popper.js, prop-types, classnames, recompose,
+  react-transition-group, react-event-listener, cytoscape-dagre,
+  cytoscape-edge-connections, webgme-react-components and their dependencies.
+
 
 A.2 Components included without modification
 
@@ -110,20 +142,6 @@ DataTables 1.13.4
 license = MIT (See Section B)
 copyright notice = Copyright (c) 2008-present, SpryMedia Limited
 source = webgme-app/src/vendor/datatables
-
-HierarchicalModelEditor visualizer bundle
-file = webgme-app/src/visualizers/panels/HierarchicalModelEditor/HierarchicalModelEditor.bundle.js
-       (webpack bundle; the copyright and license notices of the bundled modules are
-       kept in the file)
-license = MIT (See Section B), except hoist-non-react-statics (Copyright 2015,
-          Yahoo! Inc.) and warning (Copyright 2014-2015, Facebook, Inc.), which are
-          BSD-3-Clause (See Section B)
-bundled components = React 16.7.0 and react-dom (Copyright (c) Facebook, Inc. and its
-          affiliates), Material-UI (@material-ui/core, @material-ui/icons), redux,
-          react-redux, jss and its plugins, lodash, dagre, graphlib, popper.js,
-          prop-types, classnames, recompose, react-transition-group,
-          react-event-listener, cytoscape-dagre, cytoscape-edge-connections,
-          webgme-react-components and their dependencies
 
 Material Design Icons 4.0.0
 license = Apache-2.0 (See Section B)

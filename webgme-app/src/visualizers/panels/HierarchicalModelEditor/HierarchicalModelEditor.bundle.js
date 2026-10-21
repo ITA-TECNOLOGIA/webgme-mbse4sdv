@@ -103518,6 +103518,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /**
  * DISTRIBUTION STATEMENT C: U.S. Government agencies and their contractors.
  * Other requests shall be referred to DARPA’s Public Release Center via email at prc@darpa.mil.
+ *
+ * NOTE (MBSE4SDV): this file comes from https://github.com/webgme/hierarchical-model-editor
+ * (commit 243eec7), which is published under the MIT License, Copyright (c) 2019
+ * Vanderbilt University, ISIS. The distribution statement above is kept as it
+ * appears in the original source. See THIRD_PARTY_LICENSES at the root of this
+ * repository.
  * This is the main Component for the Visualizer.
  * It contains boilerplate code matching the dcryppsPanel.js and creates the Redux store and additionally
  * creates and configures the pieces that builds up the visualizer.
@@ -103663,6 +103669,12 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * DISTRIBUTION STATEMENT C: U.S. Government agencies and their contractors.
  * Other requests shall be referred to DARPA’s Public Release Center via email at prc@darpa.mil.
+ *
+ * NOTE (MBSE4SDV): this file comes from https://github.com/webgme/hierarchical-model-editor
+ * (commit 243eec7), which is published under the MIT License, Copyright (c) 2019
+ * Vanderbilt University, ISIS. The distribution statement above is kept as it
+ * appears in the original source. See THIRD_PARTY_LICENSES at the root of this
+ * repository.
  * @author pmeijer / https://github.com/pmeijer
  */
 
@@ -103712,6 +103724,12 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * DISTRIBUTION STATEMENT C: U.S. Government agencies and their contractors.
  * Other requests shall be referred to DARPA’s Public Release Center via email at prc@darpa.mil.
+ *
+ * NOTE (MBSE4SDV): this file comes from https://github.com/webgme/hierarchical-model-editor
+ * (commit 243eec7), which is published under the MIT License, Copyright (c) 2019
+ * Vanderbilt University, ISIS. The distribution statement above is kept as it
+ * appears in the original source. See THIRD_PARTY_LICENSES at the root of this
+ * repository.
  * @author pmeijer / https://github.com/pmeijer
  */
 var setActiveNode = function setActiveNode(activeNode) {
@@ -103760,6 +103778,12 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * DISTRIBUTION STATEMENT C: U.S. Government agencies and their contractors.
  * Other requests shall be referred to DARPA’s Public Release Center via email at prc@darpa.mil.
+ *
+ * NOTE (MBSE4SDV): this file comes from https://github.com/webgme/hierarchical-model-editor
+ * (commit 243eec7), which is published under the MIT License, Copyright (c) 2019
+ * Vanderbilt University, ISIS. The distribution statement above is kept as it
+ * appears in the original source. See THIRD_PARTY_LICENSES at the root of this
+ * repository.
  * @author pmeijer / https://github.com/pmeijer
  */
  // import update from 'immutability-helper';
